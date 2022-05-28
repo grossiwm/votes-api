@@ -20,7 +20,7 @@ public class EleicaoService {
 		eleicaoRepository.save(eleicao);
 	}
 	
-	public List<Eleicao> obterList() {
+	public List<Eleicao> obterLista() {
 		return (List<Eleicao>) eleicaoRepository.findAll();
 	}
 	

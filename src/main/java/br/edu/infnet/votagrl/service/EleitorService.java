@@ -21,7 +21,7 @@ public class EleitorService {
 		eleitorRepository.save(eleitor);
 	}
 	
-	public List<Eleitor> obterList() {
+	public List<Eleitor> obterLista() {
 		return (List<Eleitor>) eleitorRepository.findAll();
 	}
 }

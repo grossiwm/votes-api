@@ -15,15 +15,19 @@ public class CandidatoService {
 	@Autowired
 	private CandidatoRepository candidatoRepository;
 	
+	public List<Candidato> obterLista(){
+		return (List<Candidato>) candidatoRepository.findAll();
+	}
+
+//	public List<Candidato> obterLista(Eleicao eleicao){
+//		return (List<Candidato>) candidatoRepository.findAll(eleicao.getId());
+//	}
+
 	public void incluir(Candidato candidato) {
 		candidatoRepository.save(candidato);
 	}
 	
-	public List<Candidato> obterList() {
-		return (List<Candidato>) candidatoRepository.findAll();
-	}
-	
-	public List<Candidato> obterList(Eleicao eleicao) {
-		return (List<Candidato>) candidatoRepository.findAll();
+	public void excluir(Integer id) {
+		candidatoRepository.deleteById(id);
 	}
 }
