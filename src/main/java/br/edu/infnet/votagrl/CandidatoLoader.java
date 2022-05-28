@@ -12,21 +12,25 @@ import br.edu.infnet.votagrl.model.repository.CandidatoRepository;
 import br.edu.infnet.votagrl.model.repository.EleicaoRepository;
 import br.edu.infnet.votagrl.model.repository.EleitorRepository;
 import br.edu.infnet.votagrl.model.repository.VotoRepository;
+import br.edu.infnet.votagrl.service.CandidatoService;
+import br.edu.infnet.votagrl.service.EleicaoService;
+import br.edu.infnet.votagrl.service.EleitorService;
+import br.edu.infnet.votagrl.service.VotoService;
 
 public class CandidatoLoader implements ApplicationRunner {
 
 	
 	@Autowired
-	private CandidatoRepository candidatoRepository;
+	private CandidatoService candidatoService;
 	
 	@Autowired
-	private EleicaoRepository eleicaoRepository;
+	private EleicaoService eleicaoService;
 	
 	@Autowired
-	private EleitorRepository eleitorRepository;
+	private EleitorService eleitorService;
 	
 	@Autowired
-	private VotoRepository votoRepository;
+	private VotoService votoService;
 	
 	@Override
 	public void run(ApplicationArguments args) throws Exception {
@@ -35,19 +39,19 @@ public class CandidatoLoader implements ApplicationRunner {
 		Candidato candidato = new Candidato();
 		candidato.setNome("Fulano");
 		candidato.setNumero(1877);
-		candidatoRepository.save(candidato);
+		candidatoService.incluir(candidato);
 		
 		Eleicao eleicao = new Eleicao();
 		eleicao.setDescricao("sksdahjksdaj");
-		eleicaoRepository.save(eleicao);
+		eleicaoService.incluir(eleicao);
 		
 		Eleitor eleitor = new Eleitor();
 		eleitor.setCodigo("323223");
-		eleitorRepository.save(eleitor);
+		eleitorService.incluir(eleitor);
 		
 		Voto voto = new Voto();
 		voto.setLocalizacao("RJ");
-		votoRepository.save(voto);
+		votoService.incluir(voto);
 		
 		
 	}

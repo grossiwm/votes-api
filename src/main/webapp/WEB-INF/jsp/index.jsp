@@ -9,10 +9,10 @@
 <body>
 
 	<div class="container mt-3">
-	  <h2>AppPedido: sistema de gestão de pedidos</h2>
-	  <h3>Elberth L C Moraes</h3>
+	  <h2>VotoApp: sistema de eleições</h2>
+	  <h3>Gabriel</h3>
 	  
-	  <h4><a href="/alunos">Cadastramento de Alunos</a></h4>
+	  <h4><a href="/alunos">Home</a></h4>
 	</div>
 
 </body>

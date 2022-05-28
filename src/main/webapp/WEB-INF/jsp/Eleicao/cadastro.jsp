@@ -12,21 +12,16 @@
 	<c:import url="/WEB-INF/jsp/menu.jsp"/>
 
 	<div class="container mt-3">
-	  <h2>Cadastramento de Eleição</h2>
-	 	
-	  <form action="/usuario/incluir" method="post">
+	  <h2>Cadastramento de Eleiï¿½ï¿½o</h2>
+	  
+	  <form action="/eleicao/incluir" method="post">
 	    <div class="mb-3 mt-3">
-	      <label>Descrição:</label>
-	      <input type="text" class="form-control" placeholder="Entre com o seu nome" name="descricao" value="Elberth L C Moraes">
+	      <label>Descriï¿½ï¿½o:</label>
+	      <input type="text" class="form-control" placeholder="Entre com a descriï¿½ï¿½o da eleiï¿½ï¿½o" name="descricao" value="Primeira Eleiï¿½ï¿½o">
 	    </div>
-
-
-
-		<c:import url="/WEB-INF/jsp/endereco.jsp"/>
 
 	    <button type="submit" class="btn btn-primary">Cadastrar</button>
 	  </form>
 	</div>
-
 </body>
-</html>
+</html>	
