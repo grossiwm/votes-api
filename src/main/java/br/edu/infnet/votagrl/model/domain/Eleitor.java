@@ -1,6 +1,23 @@
 package br.edu.infnet.votagrl.model.domain;
 
+import java.util.List;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import javax.persistence.Transient;
+import javax.persistence.UniqueConstraint;
+
+@Entity
+@Table(name = "TEleitor", uniqueConstraints =@UniqueConstraint(columnNames={"codigo"})
+ )
 public class Eleitor {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer id;
 	
 	private String codigo;
 	
@@ -11,9 +28,28 @@ public class Eleitor {
 	private String telefone;
 	
 	private String token;
+	
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	@Transient
+	private List<Voto> votos;
 
 	public String getCodigo() {
 		return codigo;
+	}
+
+	public List<Voto> getVotos() {
+		return votos;
+	}
+
+	public void setVotos(List<Voto> votos) {
+		this.votos = votos;
 	}
 
 	public void setCodigo(String codigo) {
