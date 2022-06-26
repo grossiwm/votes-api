@@ -1,4 +1,4 @@
-package br.edu.infnet.votagrl;
+package br.edu.infnet.votaapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
