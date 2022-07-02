@@ -24,7 +24,6 @@ public class VotoController {
         return votoService.obterLista();
     }
 
-
     @PostMapping(value = "/voto")
     public void incluiVoto(@RequestBody Voto voto) {
         votoService.incluir(voto);
